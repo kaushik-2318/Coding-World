@@ -1,0 +1,56 @@
+<html>
+<head>
+    <title>Sign In</title>
+    <link rel="stylesheet" href="../Css/Sign In.css">
+    <link rel="shortcut icon" href="../Image/code.jpg" type="image">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="content">
+      <div class="logo"><a href="../index.html">Coding World</a></div>
+      <ul class="menu-list">
+        <div class="icon cancel-btn">
+          <i class="fas fa-times"></i>
+        </div>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="Sign In.html">Suscription</a></li>
+        <li><a href="Contact Us.html">Contact Us</a></li>
+      </ul>
+      <div class="icon menu-btn">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </nav>
+  <section>
+    <form class="box" action="../index.html" method="post">
+      <h1>Suscribe</h1>
+      <input type="email" name="" placeholder="Email Id">
+      <input type="submit" name="" value="Suscribe">
+    </form>
+    <div class="banner"></div>
+    <div class="about">
+      <div class="content">
+      </div>
+    </div>
+  </section>
+  <script>
+    const body = document.querySelector("body");
+    const navbar = document.querySelector(".navbar");
+    const menuBtn = document.querySelector(".menu-btn");
+    const cancelBtn = document.querySelector(".cancel-btn");
+    menuBtn.onclick = ()=>{
+      navbar.classList.add("show");
+      menuBtn.classList.add("hide");
+      body.classList.add("disabled");
+    }
+    cancelBtn.onclick = ()=>{
+      body.classList.remove("disabled");
+      navbar.classList.remove("show");
+      menuBtn.classList.remove("hide");
+    }
+    window.onscroll = ()=>{
+      this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+    }
+  </script>
+</body>
+</html>

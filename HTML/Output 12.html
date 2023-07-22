@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Output 12</title>
+    <link rel="stylesheet" href="../Css/Output 12.css">
+    <link rel="shortcut icon" href="../Image/code.jpg" type="image">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="content">
+      <div class="logo">
+        <a href="../index.html">Coding World</a>
+      </div>
+      <ul class="menu-list">
+        <div class="icon cancel-btn">
+          <i class="fas fa-times"></i>
+        </div>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="Sign In.html">Suscription</a></li>
+        <li><a href="Contact Us.html">Contact Us</a></li>
+      </ul>
+      <div class="icon menu-btn">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </nav>
+
+  <section>
+
+  </section>
+  <div class="about">
+      <div class="title">Creative Text Animation Effects</div>
+      <p class="titles">Source Code</p>
+      <p style="padding-left: 50px">
+        HTML <span style="padding-left: 800px;">CSS</span>
+        <br>
+        <textarea readonly="" rows="30" style="overflow: auto; height: 40%; resize: both; width: 40%; background: #26c0c0;">
+         
+        </textarea>
+        <textarea readonly="" rows="30" style="overflow: auto; height: 40%; resize: both; width: 40%; background: #26c0c0; position:relative; left:250px">
+        </textarea>
+      </p>
+    </div>
+  </div>
+  <script>
+    const body = document.querySelector("body");
+    const navbar = document.querySelector(".navbar");
+    const menu = document.querySelector(".menu-list");
+    const menuBtn = document.querySelector(".menu-btn");
+    const cancelBtn = document.querySelector(".cancel-btn");
+    menuBtn.onclick = ()=>{
+      menu.classList.add("active");
+      menuBtn.classList.add("hide");
+      cancelBtn.classList.add("show");
+      body.classList.add("disabledScroll");
+    }
+    cancelBtn.onclick = ()=>{
+      menu.classList.remove("active");
+      menuBtn.classList.remove("hide");
+      cancelBtn.classList.remove("show");
+      body.classList.remove("disabledScroll");
+    }
+
+    window.onscroll = ()=>{
+      this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+    }
+    function changeBg(){
+
+      const images = [
+        'url("../Image/code.jpg")',
+        'url("../Image/12.jpg")',
+      ]
+
+      const section = document.querySelector('section')
+      const bg = images[Math.floor(Math.random() * 
+      images.length)];
+      section.style.backgroundImage = bg;
+    }
+
+    setInterval(changeBg, 800)
+  </script>
+</body>
+</html>

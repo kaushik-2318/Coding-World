@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomePage</title>
+    <link rel="stylesheet" href="Css/Homepage.css">
+    <link rel="shortcut icon" href="Image/code.jpg" type="image">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="content">
+      <div class="logo">
+        <a href="index.html">Coding World</a>
+      </div>
+      <ul class="menu-list">
+        <div class="icon cancel-btn">
+          <i class="fas fa-times"></i>
+        </div>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="HTML/Sign In.html">Suscription</a></li>
+        <li><a href="HTML/Contact Us.html">Contact Us</a></li>
+      </ul>
+      <div class="icon menu-btn">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </nav>
+  <div class="code"></div>
+  <div class="about">
+    <div class="content">
+      <div class="title">Welcome to Coding World</div>
+      <p>Here you will find different outputs.</p>
+      <p>Click on the outputs to find their respective source code.</p>
+      </div>
+  </div>
+<p>
+  <div class="mouse">
+    <div class="moist">
+      <a href="HTML/Output 1.html"><img src="Image/1.jpg">
+      <div class="desc">CSS Glowing TubeLight Text Animation Effect</div></a>
+    </div>
+  </div>
+
+  <div class="mouse">
+    <div class="moist">
+      <a href="HTML/Output 2.html"><img src="Image/2.jpg">
+      <div class="desc">Search Box</div></a>
+    </div>
+  </div><div class="mouse">
+    <div class="moist">
+      <a href="HTML/Output 3.html"><img src="Image/3.jpg">
+      <div class="desc">Neon Light Button Hover Effect</div></a>
+    </div>
+  </div><div class="mouse">
+    <div class="moist">
+      <a href="HTML/Output 4.html"><img src="Image/4.jpg">
+      <div class="desc">Social Media Button with Tooltip on Hover</div></a>
+    </div>
+  </div><div class="mouse">
+    <div class="moist">
+      <a href="HTML/Output 5.html"><img src="Image/5.jpg">
+      <div class="desc">Shiny Glass Button Hover Effect</div></a>
+    </div>
+  </div><div class="mouse">
+    <div class="moist">
+      <a href="HTML/Output 6.html"><img src="Image/6.jpg">
+      <div class="desc">Working Digital Clock</div></a>
+    </div>
+  </div><div class="mouse">
+    <div class="moist">
+      <a href="HTML/Output 7.html"><img src="Image/7.jpg">
+      <div class="desc">Glowing Bulb Effect</div></a>
+    </div>
+  </div><div class="mouse">
+    <div class="moist">
+      <a href="HTML/Output 8.html"><img src="Image/8.jpg">
+      <div class="desc">Circle Loader with Check-Mark Animation</div></a>
+    </div>
+  </div><div class="mouse">
+    <div class="moist">
+      <a href="HTML/Output 9.html"><img src="Image/9.jpg">
+      <div class="desc">404 Error Page</div></a>
+    </div>
+  </div><div class="mouse">
+    <div class="moist">
+      <a href="HTML/Output 10.html"><img src="Image/10.jpg">
+      <div class="desc">Button Hover Animation Effect</div></a>
+    </div>
+  </div><div class="mouse">
+    <div class="moist">
+      <a href="HTML/Output 11.html"><img src="Image/11.jpg">
+      <div class="desc">3D Layered Hover Effect on Social Media Button</div></a>
+    </div>
+  </div>
+  <div class="mouse">
+    <div class="moist">
+      <a href="HTML/Output 12.html"><img src="Image/12.jpg">
+      <div class="desc">Creative Text Animation Effects</div></a>
+    </div>
+  </div>
+</p>
+   <script>
+    const body = document.querySelector("body");
+    const navbar = document.querySelector(".navbar");
+    const menuBtn = document.querySelector(".menu-btn");
+    const cancelBtn = document.querySelector(".cancel-btn");
+    menuBtn.onclick = ()=>{
+      navbar.classList.add("show");
+      menuBtn.classList.add("hide");
+      body.classList.add("disabled");
+    }
+    cancelBtn.onclick = ()=>{
+      body.classList.remove("disabled");
+      navbar.classList.remove("show");
+      menuBtn.classList.remove("hide");
+    }
+    window.onscroll = ()=>{
+      this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+    }
+  </script>
+
+</body>
+</html>
